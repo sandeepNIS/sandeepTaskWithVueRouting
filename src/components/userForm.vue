@@ -1,13 +1,15 @@
 <template>
     <div id="user-form">
        <center>
+       
         <form @submit.prevent="handleSubmit" >
-            
+            <div class="form-group">
             <label>User Name</label>
             <input 
                 ref="first"
-                type="text"
-                :class="{ 'has-error': submitting && isNameValid }"
+                type="name"
+                
+                :class="{ 'has-error': submitting && isNameValid},'form-control' "
                 v-model="user.username"
                 @focus="clearStatus"
                 @keypress="clearStatus" 
@@ -17,7 +19,7 @@
             <label>User Email</label>
             <input 
                 type="text"
-                :class="{ 'has-error': submitting && isEmailValid }"
+                :class="{ 'has-error': submitting && isEmailValid },'form-control'"
                 v-model="user.email"
                 @focus="clearStatus"
                 required
@@ -26,7 +28,7 @@
             <label>Password</label>
             <input 
                 type="password"
-                :class="{ 'has-error': submitting && isPasswordValid }"
+                :class="{ 'has-error': submitting && isPasswordValid },'form-control'"
                 v-model="user.password"
                 @focus="clearStatus"
                 required
@@ -38,8 +40,8 @@
                 ✅ User successfully added
             </p>
             <br/><br/>
-            <button>Add User</button>
-            
+            <button class="btn btn-info">Add User</button>
+            </div>
         </form>
     </center>
     </div>
@@ -102,20 +104,14 @@ export default {
 </script>
 
 <style scoped>
-  
-  form {
+    form {
     width: 300px;
     border: 1px solid;
     padding: 20px;
   }
   
-  @media only screen and (max-width: 360px) {
-    form {
-        width: 220px;
-        border: 2px solid;
-        padding: 20px;
-    }
-  }
+  
+
     [class*='-message'] {
         font-weight: 500;
     }

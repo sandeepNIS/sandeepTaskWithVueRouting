@@ -4,7 +4,7 @@
       <p v-if="users.length < 1">
         No users
       </p>
-      <table v-else className="table striped bordered hover"  responsive size="sm" w-auto="true">
+      <table v-else className="table table-responsive{-sm|-md|-lg|-xl} table-bordered striped bordered table-hover"  responsive size="sm" w-auto="true">
         <thead>
           <tr>
             <th>Name</th>
@@ -82,4 +82,59 @@ import 'bootstrap/dist/css/bootstrap.css';
     text-align: center;
   }
 
+  @media screen and (max-width: 400px) {
+  table {
+    border: 0;
+  } 
+
+  
+  
+   table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  
+  
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .9em;
+    text-align: center;
+  }
+  
+  table td::before {
+   
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  } 
+  td:nth-of-type(1):before { content: "Name "; }
+  td:nth-of-type(2):before { content: "Email "; }
+  td:nth-of-type(3):before { content: "Action "; }
+} 
   </style>

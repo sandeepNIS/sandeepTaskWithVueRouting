@@ -1,7 +1,7 @@
 <template>
     <div id="apppp" class="small-container">
       <!-- <img id="image" src="./assets/logo.png" alt="VueJS" /> -->
-      <h1>User Details</h1>
+      <h5>User Details</h5>
       <user-details v-bind:users ="users"
       @edit:user="editUser"
                         @delete:user="deleteUser"
@@ -14,7 +14,7 @@
   
   <script>
 
-import userDetails from '../components/userDetails.vue'
+  import userDetails from '../components/userDetails.vue'
   export default {
     name: 'apppp',
     components: {
