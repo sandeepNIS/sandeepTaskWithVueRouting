@@ -2,27 +2,10 @@
     <div id="appp" class="small-container">
      
       <!-- <img id="image" src="./assets/logo.png" alt="VueJS" /> -->
-      <h1>User Register</h1>
+      <h5>User Register</h5>
       <user-form  @add:user="addUser" />
-  
-      <!-- <br/><br/>
-      <hr/>
-      <br/>
-      <h1>User Details</h1>
-      <user-details v-bind:users ="users"
-      @edit:employee="editEmployee"
-                        @delete:employee="deleteEmployee"
-      /> -->
     </div>
-  <!-- <template>
-    <div id="nav">
-      <router-link to="/">Register</router-link> |
-      <router-link to="/details">details</router-link>
-    </div>
-    <router-view/>
-  
-  
-  </template> -->
+
     </template>
   
   
@@ -30,7 +13,6 @@
   
   <script>
   import userForm from '../components/userForm.vue';
-//   import userDetails from './components/userDetails.vue';
   export default {
     name: 'appp',
     components: {
@@ -59,9 +41,7 @@
       },
       
     },
-    // mounted() {
-    //   this.getEmployees()
-    // }
+   
     
     }
   </script>
@@ -75,18 +55,6 @@
     color: #2c3e50;
   } 
  
-  /* #nav {
-    padding: 30px;
-  }
-  
-  #nav a {
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
-  #nav a.router-link-exact-active {
-    color: #42b983;
-  } */
   button {
     background: #41b883;
     border: 1px solid #41b883;
