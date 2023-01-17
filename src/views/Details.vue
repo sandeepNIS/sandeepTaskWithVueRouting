@@ -1,19 +1,11 @@
 <template>
     <div id="apppp" class="small-container">
-      <!-- <img id="image" src="./assets/logo.png" alt="VueJS" /> -->
       <h1>User Details</h1>
       <user-details v-bind:users ="users"
-      @edit:user="editUser"
-                        @delete:user="deleteUser"
-      />
+    @edit:users="editUser"
+                      @delete:users="deleteUser"
+    />
     </div>
-  <!-- <template>
-    <div id="nav">
-      <router-link to="/">Register</router-link> |
-      <router-link to="/details">details</router-link>
-    </div>
-    <router-view/>
-  </template> -->
     </template>
 
 <script>
@@ -29,7 +21,6 @@ export default {
     }
   },
   methods: {
-  
     async getEmployees() {
       try {
         const response = await fetch(`http://localhost:3080/account/list`)

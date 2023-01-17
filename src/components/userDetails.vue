@@ -31,7 +31,7 @@
   
             <td v-else>
               <button @click="editMode(user)">Edit</button>
-              <button @click="$emit('delete:user', user.id)" class="delete-button">Delete</button>
+              <button @click="$emit('delete:users', user.id)" class="delete-button">Delete</button>
             </td>
   
           </tr>
@@ -41,7 +41,7 @@
   </template>
     
   <script>
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';   
     export default {
       name: 'user-details',
       props: {
@@ -63,7 +63,7 @@ import 'bootstrap/dist/css/bootstrap.css';
         },
         editUser(user){
           if(user.username === '' || user.email === '') return
-          this.$emit('edit:user', user.id, user)
+          this.$emit('edit:users', user.id, user)
           this.editing = null        
         },
       }
