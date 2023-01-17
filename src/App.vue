@@ -7,7 +7,19 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<div class="container">
+ <a href="https://twitter.com/KaniyarSandeep"><i class="fab fa-twitter"></i></a>
+ &nbsp;     
+  <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a> 
+  &nbsp;  
+  <a href="https://www.youtube.com/watch?v=nhBVL41-_Cw"><i class="fab fa-youtube"></i></a>
+  &nbsp;  
+  <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a> 
+</div>
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       
@@ -24,6 +36,12 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+
+
+/* a{
+  color: black;
+  text-decoration: none;
+} */
 header {
   line-height: 1.5;
   max-height: 100vh;

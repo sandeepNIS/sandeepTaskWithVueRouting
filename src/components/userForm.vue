@@ -18,7 +18,7 @@
             <br/>
             <label>User Email</label>
             <input 
-                type="text"
+                type="email"
                 :class="{ 'has-error': submitting && isEmailValid },'form-control'"
                 v-model="user.email"
                 @focus="clearStatus"
@@ -104,10 +104,18 @@ export default {
 </script>
 
 <style scoped>
-    form {
+   form {
     width: 300px;
-    border: 1px solid;
+    border: 2px solid;
     padding: 20px;
+  }
+  
+  @media only screen and (max-width: 360px) {
+    form {
+        width: 240px;
+        border: 2px solid;
+        padding: 20px;
+    }
   }
   
   

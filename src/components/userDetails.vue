@@ -4,7 +4,7 @@
       <p v-if="users.length < 1">
         No users
       </p>
-      <table v-else className="table table-responsive{-sm|-md|-lg|-xl} table-bordered striped bordered table-hover"  responsive size="sm" w-auto="true">
+      <table v-else className="table table-success table-responsive{-sm|-md|-lg|-xl} table-bordered striped bordered table-hover"  responsive size="sm" w-auto="true">
         <thead>
           <tr>
             <th>Name</th>
